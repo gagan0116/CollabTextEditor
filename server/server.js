@@ -1,6 +1,5 @@
 const mongoose = require("mongoose")
 const Document = require("./Document")
-const path = require('path')
 
 mongoose.connect("mongodb://localhost/CollabText", {
   useNewUrlParser: true,
@@ -11,11 +10,11 @@ mongoose.connect("mongodb://localhost/CollabText", {
 
 const io = require('socket.io')(3001, {
     cors: {
-        origin: 'https://upshot-text-edior.herokuapp.com/',
+        origin: 'http://localhost:3000',
         methods: ['GET','POST'],
     },
 })
-/*http://localhost:3000*/
+
 const defaultValue = ""
 
 io.on("connection", socket => {
