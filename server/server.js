@@ -7,8 +7,8 @@ mongoose.connect("mongodb+srv://gagan16:Gagan@123@collabtext.0g9sk.mongodb.net/m
   useFindAndModify: false,
   useCreateIndex: true,
 })
-
-const io = require('socket.io')(process.env.PORT || 3001, {
+let port = process.env.PORT || 3001;
+const io = require('socket.io')(port, {
     cors: {
         origin: '0.0.0.0',
         methods: ['GET','POST'],
