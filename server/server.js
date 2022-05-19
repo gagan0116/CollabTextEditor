@@ -1,15 +1,16 @@
 const mongoose = require("mongoose")
 const Document = require("./Document")
-const app = express();
+const express = require('express')
 mongoose.connect("mongodb+srv://gagan16:Gagan@123@collabtext.0g9sk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
   useCreateIndex: true,
 })
+const app = express()
 app.listen(process.env.PORT || 3001, '0.0.0.0', () => {
-    console.log("Server is running.");
-  });
+  console.log("Server is running.");
+});
 
 
 let port = 3001;
