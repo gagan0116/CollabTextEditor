@@ -20,7 +20,15 @@ server.listen(port , '0.0.0.0', () => {
   console.log(`Server Running on port: ${port}`);
 });
 
-const io = require('socket.io')(server)
+const io = require('socket.io')(server, {
+    cors: {
+      origin: '*',
+    }
+  })
+
+  app.get('/', function(req, res) {
+    res.sendfile(__dirname + '/documents/e3350329-4dd2-46c7-8899-5799d7525c27');
+});
 
 const defaultValue = ""
 
