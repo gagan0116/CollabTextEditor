@@ -12,11 +12,11 @@ const app = express()
 
 const dotenv = require('dotenv').config()
 
-const port =  3001;
+const port = process.env.PORT || 80;
 
 const server = require('http').createServer(app)
 
-server.listen(port, () => {
+server.listen(port , '0.0.0.0', () => {
   console.log(`Server Running on port: ${port}`);
 });
 
