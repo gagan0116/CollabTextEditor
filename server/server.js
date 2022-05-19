@@ -12,7 +12,7 @@ const app = express()
 
 const dotenv = require('dotenv').config()
 
-const port = process.env.PORT ? process.env.PORT : 3001;
+const port =  3001;
 
 const server = require('http').createServer(app)
 
