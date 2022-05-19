@@ -1,2 +1,2 @@
-web: node server/server
-worker: npm start --prefix client
+web: npm start --prefix client
+worker: node server/server

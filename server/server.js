@@ -26,9 +26,9 @@ const io = require('socket.io')(server, {
     }
   })
 
-  app.get('/', function(req, res) {
-    res.sendfile(__dirname + '/documents/e3350329-4dd2-46c7-8899-5799d7525c27');
-});
+//   app.get('/', function(req, res) {
+//     res.sendfile(__dirname + '/documents/e3350329-4dd2-46c7-8899-5799d7525c27');
+// });
 
 const defaultValue = ""
 
