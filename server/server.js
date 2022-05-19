@@ -16,14 +16,15 @@ const port = process.env.PORT || 80;
 
 const server = require('http').createServer(app)
 
-server.listen(port , '0.0.0.0', () => {
+server.listen(port ,  () => {
   console.log(`Server Running on port: ${port}`);
 });
 
-const io = require('socket.io')(server, {
+const io = require("socket.io")(process.env.PORT || 3001, {
     cors: {
-      origin: '*',
-    }
+      origin: "*",
+      methods: ["GET", "POST"],
+    },
   })
 
 //   app.get('/', function(req, res) {
