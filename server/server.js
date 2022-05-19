@@ -9,12 +9,15 @@ mongoose.connect("mongodb+srv://gagan16:Gagan@123@collabtext.0g9sk.mongodb.net/m
 })
 const app = express()
 
-app.listen( 3001, '0.0.0.0', () => {
-  console.log("Server is running.");
-});
+
 const dotenv = require('dotenv').config()
 
 
+const port = process.env.PORT
+
+server.listen(port, () => {
+  console.log(`Server Running on port: ${port}`);
+});
 const server = require('http').createServer(app)
 const io = require('socket.io')(server)
 
