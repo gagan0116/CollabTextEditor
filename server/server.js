@@ -12,7 +12,7 @@ const app = express()
 app.listen( 3001, '0.0.0.0', () => {
   console.log("Server is running.");
 });
-
+const dotenv = require('dotenv').config()
 
 
 const server = require('http').createServer(app)
