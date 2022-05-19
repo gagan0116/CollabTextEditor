@@ -1,2 +1,2 @@
-web: nodemon server/server
+web: node server/server
 worker: npm start --prefix client
