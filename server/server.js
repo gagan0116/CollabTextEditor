@@ -10,7 +10,7 @@ mongoose.connect("mongodb+srv://gagan16:Gagan@123@collabtext.0g9sk.mongodb.net/m
 
 const io = require('socket.io')(3001, {
     cors: {
-        origin: 'http://localhost:3000',
+        origin: 'http://0.0.0.0:3000',
         methods: ['GET','POST'],
     },
 })
