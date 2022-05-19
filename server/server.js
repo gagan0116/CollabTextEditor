@@ -9,7 +9,7 @@ mongoose.connect("mongodb+srv://gagan16:Gagan@123@collabtext.0g9sk.mongodb.net/m
 })
 const app = express()
 
-app.listen(process.env.PORT || 3001, '0.0.0.0', () => {
+app.listen(process.env.PORT|| 3001, '0.0.0.0', () => {
   console.log("Server is running.");
 });
 
