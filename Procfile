@@ -1,1 +1,1 @@
-web: node server/server.js -p $process.env.PORT
+worker: node server/server.js
