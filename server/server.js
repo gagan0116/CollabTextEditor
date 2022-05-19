@@ -8,18 +8,15 @@ mongoose.connect("mongodb+srv://gagan16:Gagan@123@collabtext.0g9sk.mongodb.net/m
   useCreateIndex: true,
 })
 const app = express()
+
 app.listen(process.env.PORT || 3001, '0.0.0.0', () => {
   console.log("Server is running.");
 });
 
 
-let port = 3001;
-const io = require('socket.io')(port, {
-    cors: {
-        origin: '0.0.0.0',
-        methods: ['GET','POST'],
-    },
-})
+
+const server = require('http').Server(app)
+const io = require('socket.io')(server)
 
 const defaultValue = ""
 
