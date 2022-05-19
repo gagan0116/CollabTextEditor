@@ -12,13 +12,14 @@ const app = express()
 
 const dotenv = require('dotenv').config()
 
+const port = process.env.PORT ? process.env.PORT : 3001;
 
-const port = process.env.PORT
+const server = require('http').createServer(app)
 
 server.listen(port, () => {
   console.log(`Server Running on port: ${port}`);
 });
-const server = require('http').createServer(app)
+
 const io = require('socket.io')(server)
 
 const defaultValue = ""
