@@ -1,3 +1,6 @@
+import {createServer} from "http";
+import {Server} from "socket.io"
+
 const mongoose = require("mongoose")
 const Document = require("./Document")
 const express = require('express')
@@ -13,20 +16,18 @@ const dotenv = require('dotenv').config()
 
 const port = process.env.PORT || 80;
 
-const server = require('http').createServer(app)
+const httpServer = require('http').createServer()
 
 server.listen(port ,  () => {
   console.log(`Server Running on port: ${port}`);
 });
 
-const io = require("socket.io")(3001, {
+const io = require("socket.io")(httpServer, {
     cors: {
       origin: "*",
       methods: ["GET", "POST"],
     },
   })
-
-
 
 const defaultValue = ""
 
@@ -44,6 +45,8 @@ io.on("connection", socket => {
         })
     })
 })
+
+httpServer.listen(3000)
 
 async function findOrCreateDocument(id) {
     if (id == null) return
