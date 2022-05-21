@@ -19,9 +19,9 @@ server.listen(port ,  () => {
   console.log(`Server Running on port: ${port}`);
 });
 
-const io = require("socket.io")(3001, {
+const io = require("socket.io")(35732, {
     cors: {
-      origin: "https://upshottexteditor.herokuapp.com",
+      origin: "*",
       methods: ["GET", "POST"],
     },
   })

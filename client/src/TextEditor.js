@@ -25,7 +25,7 @@ export default function TextEditor() {
 
 
   useEffect(() => {
-    const s = io("https://upshottexteditor.herokuapp.com:3001")
+    const s = io(35732)
     setSocket(s)
 
     return () => {
