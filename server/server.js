@@ -21,12 +21,10 @@ server.listen(port ,  () => {
 
 const io = require("socket.io")(3001, {
     cors: {
-      origin: "https://upshottexteditor.herokuapp.com/",
+      origin: "*",
       methods: ["GET", "POST"],
     },
   })
-
-
 
 const defaultValue = ""
 
