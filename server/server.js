@@ -9,7 +9,6 @@ mongoose.connect("mongodb+srv://gagan16:Gagan@123@collabtext.0g9sk.mongodb.net/m
 })
 const app = express()
 
-
 const dotenv = require('dotenv').config()
 
 const port = process.env.PORT || 80;
@@ -20,16 +19,14 @@ server.listen(port ,  () => {
   console.log(`Server Running on port: ${port}`);
 });
 
-const io = require("socket.io")(process.env.PORT || 3001, {
+const io = require("socket.io")(3001, {
     cors: {
       origin: "*",
       methods: ["GET", "POST"],
     },
   })
 
-//   app.get('/', function(req, res) {
-//     res.sendfile(__dirname + '/documents/e3350329-4dd2-46c7-8899-5799d7525c27');
-// });
+
 
 const defaultValue = ""
 
