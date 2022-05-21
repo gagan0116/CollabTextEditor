@@ -19,7 +19,12 @@ server.listen(port ,  () => {
   console.log(`Server Running on port: ${port}`);
 });
 
-const io = require("socket.io")(server)
+const io = require("socket.io")(3001, {
+    cors: {
+      origin: "*",
+      methods: ["GET", "POST"],
+    },
+  })
 
 
 
